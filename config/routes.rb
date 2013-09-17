@@ -1,4 +1,6 @@
 Asterisk::Application.routes.draw do
+  get "pages/home"
+  get "pages/statistic"
   resources :cels
 
   resources :cdrs
