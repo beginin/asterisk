@@ -1,2 +1,35 @@
-<h1>Pages#statistic</h1>
-<p>Find me in app/views/pages/statistic.html.erb</p>
+<h1>Статистика</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Дата</th>
+      <th>Источник</th>
+      <th>Приемник</th>
+      <th>Продолжительность</th>
+      <th>Время разговора</th>
+      <th>Результат</th>
+      <th>Uniqueid</th>
+      <th>Sequence</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdrs.each do |cdr| %>
+      <tr>
+        <td><%= cdr.calldate %></td>
+        <td><%= cdr.src %></td>
+        <td><%= cdr.dst %></td>
+        <td><%= cdr.duration %></td>
+        <td><%= cdr.billsec %></td>
+        <td><%= cdr.disposition %></td>
+        <td><%= cdr.uniqueid %></td>
+        <td><%= cdr.sequence %></td>
+        <td><%= link_to 'Show', cdr %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

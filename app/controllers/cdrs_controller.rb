@@ -10,6 +10,7 @@ class CdrsController < ApplicationController
   # GET /cdrs/1
   # GET /cdrs/1.json
   def show
+    @cels = Cel.where("uniqueid like ?",@cdr.uniqueid)
   end
 
   # GET /cdrs/new
