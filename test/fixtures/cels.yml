@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  eventtype: MyString
+  eventtime: 2013-09-17 14:47:37
+  userdeftype: MyString
+  cid_name: MyString
+  cid_num: MyString
+  cid_ani: MyString
+  cid_rdnis: MyString
+  cid_dnid: MyString
+  exten: MyString
+  context: MyString
+  channame: MyString
+  appname: MyString
+  appdata: MyString
+  amaflags: 1
+  accountcode: MyString
+  peeraccount: MyString
+  uniqueid: MyString
+  linkedid: MyString
+  userfield: MyString
+  peer: MyString
+
+two:
+  eventtype: MyString
+  eventtime: 2013-09-17 14:47:37
+  userdeftype: MyString
+  cid_name: MyString
+  cid_num: MyString
+  cid_ani: MyString
+  cid_rdnis: MyString
+  cid_dnid: MyString
+  exten: MyString
+  context: MyString
+  channame: MyString
+  appname: MyString
+  appdata: MyString
+  amaflags: 1
+  accountcode: MyString
+  peeraccount: MyString
+  uniqueid: MyString
+  linkedid: MyString
+  userfield: MyString
+  peer: MyString

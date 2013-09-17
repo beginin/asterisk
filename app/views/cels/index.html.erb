@@ -1,0 +1,65 @@
+<h1>Listing cels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eventtype</th>
+      <th>Eventtime</th>
+      <th>Userdeftype</th>
+      <th>Cid name</th>
+      <th>Cid num</th>
+      <th>Cid ani</th>
+      <th>Cid rdnis</th>
+      <th>Cid dnid</th>
+      <th>Exten</th>
+      <th>Context</th>
+      <th>Channame</th>
+      <th>Appname</th>
+      <th>Appdata</th>
+      <th>Amaflags</th>
+      <th>Accountcode</th>
+      <th>Peeraccount</th>
+      <th>Uniqueid</th>
+      <th>Linkedid</th>
+      <th>Userfield</th>
+      <th>Peer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cels.each do |cel| %>
+      <tr>
+        <td><%= cel.eventtype %></td>
+        <td><%= cel.eventtime %></td>
+        <td><%= cel.userdeftype %></td>
+        <td><%= cel.cid_name %></td>
+        <td><%= cel.cid_num %></td>
+        <td><%= cel.cid_ani %></td>
+        <td><%= cel.cid_rdnis %></td>
+        <td><%= cel.cid_dnid %></td>
+        <td><%= cel.exten %></td>
+        <td><%= cel.context %></td>
+        <td><%= cel.channame %></td>
+        <td><%= cel.appname %></td>
+        <td><%= cel.appdata %></td>
+        <td><%= cel.amaflags %></td>
+        <td><%= cel.accountcode %></td>
+        <td><%= cel.peeraccount %></td>
+        <td><%= cel.uniqueid %></td>
+        <td><%= cel.linkedid %></td>
+        <td><%= cel.userfield %></td>
+        <td><%= cel.peer %></td>
+        <td><%= link_to 'Show', cel %></td>
+        <td><%= link_to 'Edit', edit_cel_path(cel) %></td>
+        <td><%= link_to 'Destroy', cel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cel', new_cel_path %>

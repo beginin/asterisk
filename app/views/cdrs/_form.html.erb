@@ -1,0 +1,93 @@
+<%= form_for(@cdr) do |f| %>
+  <% if @cdr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cdr.errors.count, "error") %> prohibited this cdr from being saved:</h2>
+
+      <ul>
+      <% @cdr.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :calldate %><br>
+    <%= f.datetime_select :calldate %>
+  </div>
+  <div class="field">
+    <%= f.label :calldate %><br>
+    <%= f.text_field :calldate %>
+  </div>
+  <div class="field">
+    <%= f.label :src %><br>
+    <%= f.text_field :src %>
+  </div>
+  <div class="field">
+    <%= f.label :dst %><br>
+    <%= f.text_field :dst %>
+  </div>
+  <div class="field">
+    <%= f.label :dcontext %><br>
+    <%= f.text_field :dcontext %>
+  </div>
+  <div class="field">
+    <%= f.label :channel %><br>
+    <%= f.text_field :channel %>
+  </div>
+  <div class="field">
+    <%= f.label :dstchannel %><br>
+    <%= f.text_field :dstchannel %>
+  </div>
+  <div class="field">
+    <%= f.label :lastapp %><br>
+    <%= f.text_field :lastapp %>
+  </div>
+  <div class="field">
+    <%= f.label :lastdata %><br>
+    <%= f.text_field :lastdata %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :billsec %><br>
+    <%= f.number_field :billsec %>
+  </div>
+  <div class="field">
+    <%= f.label :disposition %><br>
+    <%= f.text_field :disposition %>
+  </div>
+  <div class="field">
+    <%= f.label :amaflags %><br>
+    <%= f.number_field :amaflags %>
+  </div>
+  <div class="field">
+    <%= f.label :accountcode %><br>
+    <%= f.text_field :accountcode %>
+  </div>
+  <div class="field">
+    <%= f.label :uniqueid %><br>
+    <%= f.text_field :uniqueid %>
+  </div>
+  <div class="field">
+    <%= f.label :userfield %><br>
+    <%= f.text_field :userfield %>
+  </div>
+  <div class="field">
+    <%= f.label :peeraccount %><br>
+    <%= f.text_field :peeraccount %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedid %><br>
+    <%= f.text_field :linkedid %>
+  </div>
+  <div class="field">
+    <%= f.label :sequence %><br>
+    <%= f.number_field :sequence %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

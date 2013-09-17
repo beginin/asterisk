@@ -1,0 +1,97 @@
+<%= form_for(@cel) do |f| %>
+  <% if @cel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cel.errors.count, "error") %> prohibited this cel from being saved:</h2>
+
+      <ul>
+      <% @cel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :eventtype %><br>
+    <%= f.text_field :eventtype %>
+  </div>
+  <div class="field">
+    <%= f.label :eventtime %><br>
+    <%= f.datetime_select :eventtime %>
+  </div>
+  <div class="field">
+    <%= f.label :userdeftype %><br>
+    <%= f.text_field :userdeftype %>
+  </div>
+  <div class="field">
+    <%= f.label :cid_name %><br>
+    <%= f.text_field :cid_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cid_num %><br>
+    <%= f.text_field :cid_num %>
+  </div>
+  <div class="field">
+    <%= f.label :cid_ani %><br>
+    <%= f.text_field :cid_ani %>
+  </div>
+  <div class="field">
+    <%= f.label :cid_rdnis %><br>
+    <%= f.text_field :cid_rdnis %>
+  </div>
+  <div class="field">
+    <%= f.label :cid_dnid %><br>
+    <%= f.text_field :cid_dnid %>
+  </div>
+  <div class="field">
+    <%= f.label :exten %><br>
+    <%= f.text_field :exten %>
+  </div>
+  <div class="field">
+    <%= f.label :context %><br>
+    <%= f.text_field :context %>
+  </div>
+  <div class="field">
+    <%= f.label :channame %><br>
+    <%= f.text_field :channame %>
+  </div>
+  <div class="field">
+    <%= f.label :appname %><br>
+    <%= f.text_field :appname %>
+  </div>
+  <div class="field">
+    <%= f.label :appdata %><br>
+    <%= f.text_field :appdata %>
+  </div>
+  <div class="field">
+    <%= f.label :amaflags %><br>
+    <%= f.number_field :amaflags %>
+  </div>
+  <div class="field">
+    <%= f.label :accountcode %><br>
+    <%= f.text_field :accountcode %>
+  </div>
+  <div class="field">
+    <%= f.label :peeraccount %><br>
+    <%= f.text_field :peeraccount %>
+  </div>
+  <div class="field">
+    <%= f.label :uniqueid %><br>
+    <%= f.text_field :uniqueid %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedid %><br>
+    <%= f.text_field :linkedid %>
+  </div>
+  <div class="field">
+    <%= f.label :userfield %><br>
+    <%= f.text_field :userfield %>
+  </div>
+  <div class="field">
+    <%= f.label :peer %><br>
+    <%= f.text_field :peer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

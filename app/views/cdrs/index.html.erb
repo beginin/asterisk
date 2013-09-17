@@ -1,0 +1,63 @@
+<h1>Listing cdrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Calldate</th>
+      <th>Calldate</th>
+      <th>Src</th>
+      <th>Dst</th>
+      <th>Dcontext</th>
+      <th>Channel</th>
+      <th>Dstchannel</th>
+      <th>Lastapp</th>
+      <th>Lastdata</th>
+      <th>Duration</th>
+      <th>Billsec</th>
+      <th>Disposition</th>
+      <th>Amaflags</th>
+      <th>Accountcode</th>
+      <th>Uniqueid</th>
+      <th>Userfield</th>
+      <th>Peeraccount</th>
+      <th>Linkedid</th>
+      <th>Sequence</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cdrs.each do |cdr| %>
+      <tr>
+        <td><%= cdr.calldate %></td>
+        <td><%= cdr.calldate %></td>
+        <td><%= cdr.src %></td>
+        <td><%= cdr.dst %></td>
+        <td><%= cdr.dcontext %></td>
+        <td><%= cdr.channel %></td>
+        <td><%= cdr.dstchannel %></td>
+        <td><%= cdr.lastapp %></td>
+        <td><%= cdr.lastdata %></td>
+        <td><%= cdr.duration %></td>
+        <td><%= cdr.billsec %></td>
+        <td><%= cdr.disposition %></td>
+        <td><%= cdr.amaflags %></td>
+        <td><%= cdr.accountcode %></td>
+        <td><%= cdr.uniqueid %></td>
+        <td><%= cdr.userfield %></td>
+        <td><%= cdr.peeraccount %></td>
+        <td><%= cdr.linkedid %></td>
+        <td><%= cdr.sequence %></td>
+        <td><%= link_to 'Show', cdr %></td>
+        <td><%= link_to 'Edit', edit_cdr_path(cdr) %></td>
+        <td><%= link_to 'Destroy', cdr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cdr', new_cdr_path %>

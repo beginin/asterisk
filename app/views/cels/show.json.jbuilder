@@ -1,0 +1,1 @@
+json.extract! @cel, :eventtype, :eventtime, :userdeftype, :cid_name, :cid_num, :cid_ani, :cid_rdnis, :cid_dnid, :exten, :context, :channame, :appname, :appdata, :amaflags, :accountcode, :peeraccount, :uniqueid, :linkedid, :userfield, :peer, :created_at, :updated_at

@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  calldate: 2013-09-17 13:05:35
+  calldate: MyString
+  src: MyString
+  dst: MyString
+  dcontext: MyString
+  channel: MyString
+  dstchannel: MyString
+  lastapp: MyString
+  lastdata: MyString
+  duration: 1
+  billsec: 1
+  disposition: MyString
+  amaflags: 1
+  accountcode: MyString
+  uniqueid: MyString
+  userfield: MyString
+  peeraccount: MyString
+  linkedid: MyString
+  sequence: 1
+
+two:
+  calldate: 2013-09-17 13:05:35
+  calldate: MyString
+  src: MyString
+  dst: MyString
+  dcontext: MyString
+  channel: MyString
+  dstchannel: MyString
+  lastapp: MyString
+  lastdata: MyString
+  duration: 1
+  billsec: 1
+  disposition: MyString
+  amaflags: 1
+  accountcode: MyString
+  uniqueid: MyString
+  userfield: MyString
+  peeraccount: MyString
+  linkedid: MyString
+  sequence: 1

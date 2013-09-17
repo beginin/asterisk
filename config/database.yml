@@ -54,7 +54,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: asterisk_production
+  database: asterisk
   pool: 5
   username: asterisk
   password:
