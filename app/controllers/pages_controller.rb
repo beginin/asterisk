@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def statistic
-  	@cdrs = Cdr.all
+  	#@cdrs = Cdr.all
+  	@cdrs = Cdr.order("calldate ASC")
   end
 end

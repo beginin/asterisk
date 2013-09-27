@@ -1,6 +1,52 @@
+<script>
+var asInitVals = new Array();
+
+$(document).ready(function() {
+  var oTable = $('#statistic').dataTable( {
+    "oLanguage": {
+      "sSearch": "Search all columns:"
+    },
+    "aaSorting": [[ 0, "desc" ]],
+    "sPaginationType": "full_numbers"
+  } );
+  
+  $("tfoot input").keyup( function () {
+    /* Filter on the column (the index) of this element */
+    oTable.fnFilter( this.value, $("tfoot input").index(this) );
+  } );
+  
+  
+  
+  /*
+   * Support functions to provide a little bit of 'user friendlyness' to the textboxes in 
+   * the footer
+   */
+  $("tfoot input").each( function (i) {
+    asInitVals[i] = this.value;
+  } );
+  
+  $("tfoot input").focus( function () {
+    if ( this.className == "search_init" )
+    {
+      this.className = "";
+      this.value = "";
+    }
+  } );
+  
+  $("tfoot input").blur( function (i) {
+    if ( this.value == "" )
+    {
+      this.className = "search_init";
+      this.value = asInitVals[$("tfoot input").index(this)];
+    }
+  } );
+} );
+
+</script>
+
 <h1>Статистика</h1>
 
-<table>
+<table id="statistic" class="display">
   <thead>
     <tr>
       <th>Дата</th>
@@ -30,6 +76,18 @@
       </tr>
     <% end %>
   </tbody>
+  <tfoot>
+    <tr>
+      <th><input type="text" name="search_calldate" value="" class="search_init" /></th>
+      <th><input type="text" name="search_src" value="" class="search_init" /></th>
+      <th><input type="text" name="search_dst" value="" class="search_init" /></th>
+      <th><input type="text" name="search_duration" value="" class="search_init" /></th>
+      <th><input type="text" name="search_billsec" value="" class="search_init" /></th>
+      <th><input type="text" name="search_disposition" value="" class="search_init" /></th>
+      <th><input type="text" name="search_uniqueid" value="" class="search_init" /></th>
+      <th><input type="text" name="search_sequence" value="" class="search_init" /></th>
+    </tr>
+  </tfoot>
 </table>
 
 <br>
