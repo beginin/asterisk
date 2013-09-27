@@ -55,8 +55,6 @@ $(document).ready(function() {
       <th>Продолжительность</th>
       <th>Время разговора</th>
       <th>Результат</th>
-      <th>Uniqueid</th>
-      <th>Sequence</th>
       <th></th>
     </tr>
   </thead>
@@ -70,8 +68,6 @@ $(document).ready(function() {
         <td><%= cdr.duration %></td>
         <td><%= cdr.billsec %></td>
         <td><%= cdr.disposition %></td>
-        <td><%= cdr.uniqueid %></td>
-        <td><%= cdr.sequence %></td>
         <td><%= link_to 'Show', cdr %></td>
       </tr>
     <% end %>
@@ -84,8 +80,6 @@ $(document).ready(function() {
       <th><input type="text" name="search_duration" value="" class="search_init" /></th>
       <th><input type="text" name="search_billsec" value="" class="search_init" /></th>
       <th><input type="text" name="search_disposition" value="" class="search_init" /></th>
-      <th><input type="text" name="search_uniqueid" value="" class="search_init" /></th>
-      <th><input type="text" name="search_sequence" value="" class="search_init" /></th>
     </tr>
   </tfoot>
 </table>
