@@ -52,7 +52,6 @@ $(document).ready(function() {
       <th>Дата</th>
       <th>Источник</th>
       <th>Приемник</th>
-      <th>Продолжительность</th>
       <th>Время разговора</th>
       <th>Результат</th>
       <th></th>
@@ -65,7 +64,6 @@ $(document).ready(function() {
         <td><%= cdr.calldate %></td>
         <td><%= cdr.src %></td>
         <td><%= cdr.dst %></td>
-        <td><%= cdr.duration %></td>
         <td><%= cdr.billsec %></td>
         <td><%= cdr.disposition %></td>
         <td><%= link_to 'Show', cdr %></td>
@@ -77,7 +75,6 @@ $(document).ready(function() {
       <th><input type="text" name="search_calldate" value="" class="search_init" /></th>
       <th><input type="text" name="search_src" value="" class="search_init" /></th>
       <th><input type="text" name="search_dst" value="" class="search_init" /></th>
-      <th><input type="text" name="search_duration" value="" class="search_init" /></th>
       <th><input type="text" name="search_billsec" value="" class="search_init" /></th>
       <th><input type="text" name="search_disposition" value="" class="search_init" /></th>
     </tr>
