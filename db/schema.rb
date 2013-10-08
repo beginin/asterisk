@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917064737) do
+ActiveRecord::Schema.define(version: 20131008093805) do
 
   create_table "cdrs", force: true do |t|
     t.string   "calldate"
@@ -57,6 +57,13 @@ ActiveRecord::Schema.define(version: 20130917064737) do
     t.string   "linkedid"
     t.string   "userfield"
     t.string   "peer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lastcalls", force: true do |t|
+    t.string   "extention"
+    t.string   "tnumber"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

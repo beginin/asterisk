@@ -1,0 +1,29 @@
+<h1>Listing lastcalls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extention</th>
+      <th>Tnumber</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lastcalls.each do |lastcall| %>
+      <tr>
+        <td><%= lastcall.extention %></td>
+        <td><%= lastcall.tnumber %></td>
+        <td><%= link_to 'Show', lastcall %></td>
+        <td><%= link_to 'Edit', edit_lastcall_path(lastcall) %></td>
+        <td><%= link_to 'Destroy', lastcall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lastcall', new_lastcall_path %>
